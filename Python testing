@@ -1,5 +1,5 @@
 # randomize a number first
-value = rand(int)
+value = random.randint(1,100)
 # guess the number 
 print ("Please enter a number between 1 and 100")
 guess = input()
