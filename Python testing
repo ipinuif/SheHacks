@@ -1,11 +1,13 @@
 # get the guess and set up
 correct = "no"
+a = int(input("Enter the lower bound of your range: "))
+b = int(input( "Enter the upper bound of your range: "))
 # randomizer
 import random
-value = random.randint(1,100)
+value = random.randint(a,b)
 # checking
 while correct == "no":
-    guess = input("Please enter a number between 1 and 100:")
+    guess = input("Please guess a random number between the values you gave: ")
     if guess.isdigit():
         guess= int(guess)
         if value > guess:
