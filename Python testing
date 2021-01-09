@@ -1,9 +1,9 @@
-# get the guess and set up
+# background checks
 correct = "no"
 rangea = "no"
 rangeb = "no"
 overallrange = "no"
-# checking ranges
+# get and check range
 while overallrange == "no":
     while rangea == "no": 
         a = input("Enter the lower bound of your range: ")
@@ -29,7 +29,7 @@ while overallrange == "no":
 # randomizer
 import random
 value = random.randint(a,b)
-# checking
+# checking the guess
 while correct == "no":
     guess = input("Please guess a random number between the values you gave: ")
     if guess.isdigit():
