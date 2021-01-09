@@ -33,20 +33,19 @@ value = random.randint(a,b)
 while correct == "no":
     guess = input("Please guess a random number between the values you gave: ")
     if guess.isdigit():
-        guess= int(guess)
-    if guess < a or guess > b:
-        print ("Value outside of range.")
-    if value > guess:
-        print ( "Incorrect. The number is higher.")
-        continue 
-    elif value < guess:
-        print ("Incorrect. The number is lower.")
-        continue
-    if guess == value:
-        correct = "yes"
-        print ("Congratulations! You guessed the number.")
-        break
+        guess = int(guess)
+        if guess < a or guess > b:
+            print ("Value outside of range.")
+        if value > guess:
+            print ( "Incorrect. The number is higher.")
+            continue 
+        elif value < guess:
+            print ("Incorrect. The number is lower.")
+            continue
+        if guess == value:
+            correct = "yes"
+            print ("Congratulations! You guessed the number.")
+            break
     else: 
          print ("Error. Only Integers Allowed.")
          continue
-    
