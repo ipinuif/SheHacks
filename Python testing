@@ -1,15 +1,31 @@
 # get the guess and set up
 correct = "no"
-a = int(input("Enter the lower bound of your range: "))
-    if a.isdigit():
-        int(a)
+rangea = "no"
+rangeb = "no"
+overallrange = "no"
+# checking ranges
+while overallrange == "no":
+    while rangea == "no": 
+        a = input("Enter the lower bound of your range: ")
+        if a.isdigit():
+            a = int(a)
+            rangea = "yes"
+            continue
+        else:
+            print("Error. Only Integers Allowed.")
+    while rangeb == "no": 
+        b = input( "Enter the upper bound of your range: ")
+        if b.isdigit():
+            b = int(b)
+            rangeb = "yes"
+        else:
+            print("Error. Only Integers Allowed.")
+    if a >= b:
+        print ("Improper range try again")
+        rangea = "no"
+        rangeb = "no"
     else:
-        print("Error. Only Integers Allowed.")
-b = input( "Enter the upper bound of your range: ")
-    if b.isdigit():
-        int(b)
-    else:
-        print("Error. Only Integers Allowed.")
+        overallrange = "yes"
 # randomizer
 import random
 value = random.randint(a,b)
@@ -31,3 +47,4 @@ while correct == "no":
     else: 
          print ("Error. Only Integers Allowed.")
          continue
+    
