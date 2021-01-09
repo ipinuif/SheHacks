@@ -1,13 +1,16 @@
-# randomize a number first
+# get the guess
+guess = int(input("Please enter a number between 1 and 100:"))
+# randomizer
+import random
 value = random.randint(1,100)
-# guess the number 
-print ("Please enter a number between 1 and 100")
-guess = input()
-# Comparisons
-if value == guess:
+# checking
+if guess != value: 
+    if type(guess)!= int:
+        print ("Error. Only Integers Allowed.")
+    else:
+        if value > guess:
+            print ( "Incorrect. The number is higher")
+        elif value < guess:
+            print ("Incorrect. The number is lower")
+else:
     print ("Congratulations! You guessed the number")
-elif value > guess:
-    print ( "Incorrect. The number is higher")
-elif value < guess:
-    print ("Incorrect. The number is lower")
-if 
