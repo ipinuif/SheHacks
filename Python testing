@@ -1,7 +1,15 @@
 # get the guess and set up
 correct = "no"
 a = int(input("Enter the lower bound of your range: "))
-b = int(input( "Enter the upper bound of your range: "))
+    if a.isdigit():
+        int(a)
+    else:
+        print("Error. Only Integers Allowed.")
+b = input( "Enter the upper bound of your range: ")
+    if b.isdigit():
+        int(b)
+    else:
+        print("Error. Only Integers Allowed.")
 # randomizer
 import random
 value = random.randint(a,b)
