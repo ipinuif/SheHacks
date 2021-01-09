@@ -1,0 +1,13 @@
+# randomize a number first
+value = rand(int)
+# guess the number 
+print ("Please enter a number between 1 and 100")
+guess = input()
+# Comparisons
+if value == guess:
+    print ("Congratulations! You guessed the number")
+elif value > guess:
+    print ( "Incorrect. The number is higher")
+elif value < guess:
+    print ("Incorrect. The number is lower")
+if 
