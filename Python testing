@@ -1,16 +1,22 @@
-# get the guess
-guess = int(input("Please enter a number between 1 and 100:"))
+# get the guess and set up
+correct = "no"
 # randomizer
 import random
 value = random.randint(1,100)
 # checking
-if guess != value: 
-    if type(guess)!= int:
-        print ("Error. Only Integers Allowed.")
-    else:
-        if value > guess:
-            print ( "Incorrect. The number is higher")
+while correct == "no":
+    guess = int(input("Please enter a number between 1 and 100:"))
+    if guess != value: 
+        if type(guess)!= int:
+            print ("Error. Only Integers Allowed.")
+            continue
+        elif value > guess:
+                print ( "Incorrect. The number is higher")
+                continue 
         elif value < guess:
             print ("Incorrect. The number is lower")
-else:
-    print ("Congratulations! You guessed the number")
+            continue
+    if guess == value:
+        correct = "yes"
+        print ("Congratulations! You guessed the number")
+        break
